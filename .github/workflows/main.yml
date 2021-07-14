@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,6 +30,5 @@ jobs:
         run: |
           pip install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
           pip install mlagents
-          dir
           pip install mlagents-video-streamer
           python train.py
